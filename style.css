@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 1s ease; 
+    background-color: #e8ffe3;
+}
+
+.nav {
+    
+    background-color: #228800;
+    overflow: hidden;
+    animation: navbar 0.5s;
+}
+
+.image1 {
+    animation: up 1.5s ease-out forwards;
+    display: block;
+    margin: auto;
+    width: auto;
+    border-radius: 15px;
+}
+
+.image2 {
+    animation: fadein 1.5s ease-out forwards;
+    display: block;
+    margin: auto;
+    width: 80%;
+    border-radius: 15px;
+}
+
+.nav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.5s, color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 145, 17);
+}
+
+.title {
+    font-size: 200%;
+    text-align: center;
+    margin-top: 20px;
+    animation: side 1s;     
+}
+
+.subtext {
+    animation: fadein 1.5s ease-out forwards;
+    font-size: small;
+    text-align: center;
+    color: #868686;
+}
+.text {
+    font-size: larger;
+    margin: 20px 5%;
+}
+
+
+
+@keyframes navbar {
+    from { transform: translateY(100%);
+    opacity: 0; }
+    to { transform: translateY(0); 
+    opacity: 1;}
+}
+
+@keyframes up {
+    from { trasform: translateY(+100%); }
+    to { tranansform: translateY(0); }
+}
+
+
+@keyframes side {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+
+.intro-animation {
+    animation: colorChange 3s infinite; 
+}
+
+@keyframes colorChange {
+    0% { color: #000; }
+    50% { color: #228800; }
+    100% { color: #000; }
+}
+
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #228800;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#topButton:hover {
+    background-color: #555; 
+}
